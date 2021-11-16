@@ -30,7 +30,7 @@ async def user_login(user: str, password: str):
     }
 
 @app.post("/user/signup", tags=["user"])
-async def user_signup(user: str, password: str):
+async def user_signup(user: str, email:str, password: str):
     if check_user(user, password):
         return {
             "error": "Account sudah terdaftar!"
@@ -39,7 +39,7 @@ async def user_signup(user: str, password: str):
         id=1
         if(len(data['account'])>0):
             id=data['account'][len(data['account'])-1]['id']+1
-        new_data={'id': id,'user': user, 'password': password}
+        new_data={'id': id,'user': user,'email' : email, 'password': password}
         data['account'].append(dict(new_data))
         read_file.close()
         with open("account.json", "w") as write_file:
