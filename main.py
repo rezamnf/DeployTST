@@ -10,6 +10,8 @@ with open("account.json", "r") as read_file:
     data = json.load(read_file)
 with open("tryout.json", "r") as read_file:
     datatryout = json.load(read_file)
+with open("vkelas.json", "r") as readFile:
+    daftarKelas = json.load(readFile)
 
 @app.get('/')
 def root():
@@ -48,6 +50,19 @@ async def user_signup(user: str, email:str, password: str):
         return {"message": "SignUp Berhasil"}
     raise HTTPException(
         status_code=500, detail=f'Internal Server Error'
+    )
+
+@app.get("/user/list_kelas", dependencies=[Depends(JWTBearer())], tags=["menu"])
+async def view_all_kelas():
+    return daftarKelas
+
+@app.get("/user/list_kelas", dependencies=[Depends(JWTBearer())], tags=["menu"])
+async def view_kelas(idkelas: int):
+    for list_kelas in daftarKelas:
+        if list_kelas["id_kelas"] == idkelas:
+            return list_kelas
+    raise HTTPException(
+        status_code = 404, detail =f'Tryout not Found'
     )
 
 @app.get("/menu/all_tryout", dependencies=[Depends(JWTBearer())], tags=["menu"])
