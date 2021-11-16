@@ -46,14 +46,22 @@ async def user_signup(user: str, email:str, password: str):
             json.dump(data,write_file,indent=4)
         write_file.close()
         return {"message": "SignUp Berhasil"}
-        raise HTTPException(
-            status_code=500, detail=f'Internal Server Error'
-            )
+    raise HTTPException(
+        status_code=500, detail=f'Internal Server Error'
+    )
 
+@app.get("/menu/all_tryout", dependencies=[Depends(JWTBearer())], tags=["menu"])
+async def read_all_tryout():
+    return datatryout
 
 @app.get("/menu/tryout", dependencies=[Depends(JWTBearer())], tags=["menu"])
-async def read_tryout():
-    return datatryout
+async def read_tryout(idtryout : int):
+    for list_tryout in datatryout["tryout"]:
+        if list_tryout["id_tryout"] == idtryout:
+            return list_tryout
+    raise HTTPException(
+        status_code = 404, detail =f'Tryout not Found'
+    )
 
 @app.put("/menu/saldo", dependencies=[Depends(JWTBearer())], tags=["menu"])
 async def isi_saldo(user: str, saldo: int):

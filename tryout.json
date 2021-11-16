@@ -1,16 +1,25 @@
 {
     "tryout": [
         {
-            "tryout_id" : 1,
-            "nama_tryout" : "Biologi Kelas 12 SMA",
-            "tanggal_tryout" : "21 November 2021",
+            "id_tryout" : 1,
+            "nama" : "Biologi Kelas 12 SMA",
+            "kuota" : 100,
+            "tanggal" : "22 November 2021",
             "harga" : 50000
         },
         {
-            "tryout_id" : 2,
-            "nama_tryout" : "Fisika Kelas 12 SMA",
-            "tanggal_tryout" : "22 November 2021",
-            "harga" : 70000
+            "id_tryout" : 2,
+            "nama" : "Fisika Kelas 12 SMA",
+            "kuota" : 150,
+            "tanggal" : "23 November 2021",
+            "harga" : 75000
+        },
+        {
+            "id_tryout" : 3,
+            "nama" : "Kimia Kelas 12 SMA",
+            "kuota" : 150,
+            "tanggal" : "21 November 2021",
+            "harga" : 50000
         }
     ]
 }
