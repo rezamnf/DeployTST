@@ -4,13 +4,13 @@
             "id_kelas" : 1,
             "nama" : "Kimia Kelas 12 SMA",
             "tanggal" : "21 November 2021",
-            "harga" : "50000"
+            "harga" : 50000
         },
         {
             "id_kelas" : 2,
             "nama" : "Ekonomi Kelas 12 SMA",
             "tanggal" : "22 November 2021",
-            "harga" : "50000"
+            "harga" : 50000
         }
     ]
 }
