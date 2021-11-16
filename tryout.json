@@ -1,0 +1,16 @@
+{
+    "tryout": [
+        {
+            "tryout_id" : 1,
+            "nama_tryout" : "Biologi Kelas 12 SMA",
+            "tanggal_tryout" : "21 November 2021",
+            "harga" : 50000
+        },
+        {
+            "tryout_id" : 2,
+            "nama_tryout" : "Fisika Kelas 12 SMA",
+            "tanggal_tryout" : "22 November 2021",
+            "harga" : 70000
+        }
+    ]
+}

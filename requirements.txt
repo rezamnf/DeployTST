@@ -1,0 +1,5 @@
+PyJWT >=1.7.1
+python-decouple >=3.3
+pydantic[email]
+fastapi >=0.62.0
+uvicorn >=0.12.3

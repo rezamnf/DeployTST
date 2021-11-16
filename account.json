@@ -1,0 +1,46 @@
+{
+    "account": [
+        {
+            "id": 1,
+            "user": "user1",
+            "password": "user1",
+            "saldo": 0
+        },
+        {
+            "id": 2,
+            "user": "user2",
+            "password": "user2",
+            "saldo": 0
+        },
+        {
+            "id": 3,
+            "user": "user3",
+            "password": "user3",
+            "saldo": 0
+        },
+        {
+            "id": 4,
+            "user": "user4",
+            "password": "user4",
+            "saldo": 0
+        },
+        {
+            "id": 5,
+            "user": "user5",
+            "password": "user5",
+            "saldo": 0
+        },
+        {
+            "id": 6,
+            "user": "user6",
+            "password": "user6",
+            "saldo": 0
+        },
+        {
+            "id": 7,
+            "user": "user7",
+            "password": "user7",
+            "saldo": 0
+        }
+    ]
+}
